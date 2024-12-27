@@ -1,10 +1,13 @@
-import { Button } from "./components/componentButtonTSX/Button"
+import { ThemeProvider } from "styled-components"
+import { Games } from "./components/twoButtonsTogether"
+import { GlobalStyle } from "./styles/global"
+import { defaultTheme } from "./styles/themes/default"
 
-function App() {
-
+export function App() {
   return (
-    <Button />
+    <ThemeProvider theme={defaultTheme}>
+      <Games />
+      <GlobalStyle />
+    </ThemeProvider>
   )
 }
-
-export default App
